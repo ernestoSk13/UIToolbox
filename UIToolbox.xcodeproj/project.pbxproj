@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B6D567324A5AF7400411281 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567224A5AF7400411281 /* SearchBarView.swift */; };
+		5B6D567524A5BAA200411281 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567424A5BAA200411281 /* PasswordField.swift */; };
+		5B6D567824A5C01500411281 /* ReusableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567724A5C01500411281 /* ReusableCollectionView.swift */; };
+		5B6D567A24A5C78400411281 /* FormTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567924A5C78400411281 /* FormTextfield.swift */; };
+		5B6D567D24A5CC1E00411281 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567C24A5CC1E00411281 /* BottomSheet.swift */; };
+		5B6D568024A5CCB400411281 /* UIToolboxUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567F24A5CCB400411281 /* UIToolboxUtils.swift */; };
+		5B6D568324A5CE6500411281 /* SparkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568224A5CE6500411281 /* SparkView.swift */; };
+		5B6D568624A5D04D00411281 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568524A5D04D00411281 /* Transitions.swift */; };
+		5B6D568924A5D11300411281 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568824A5D11300411281 /* WebView.swift */; };
+		5B6D568C24A5D21400411281 /* TextViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568B24A5D21400411281 /* TextViewRepresentable.swift */; };
+		5B6D568F24A5D44900411281 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568E24A5D44900411281 /* ActivityIndicator.swift */; };
 		5BDCCB4D24A591FB00344958 /* UIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDCCB4324A591FA00344958 /* UIToolbox.framework */; };
 		5BDCCB5224A591FB00344958 /* UIToolboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCCB5124A591FB00344958 /* UIToolboxTests.swift */; };
 		5BDCCB5424A591FB00344958 /* UIToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDCCB4624A591FA00344958 /* UIToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +86,16 @@
 
 /* Begin PBXFileReference section */
 		5B6D567224A5AF7400411281 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		5B6D567424A5BAA200411281 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		5B6D567724A5C01500411281 /* ReusableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionView.swift; sourceTree = "<group>"; };
+		5B6D567924A5C78400411281 /* FormTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextfield.swift; sourceTree = "<group>"; };
+		5B6D567C24A5CC1E00411281 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		5B6D567F24A5CCB400411281 /* UIToolboxUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolboxUtils.swift; sourceTree = "<group>"; };
+		5B6D568224A5CE6500411281 /* SparkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkView.swift; sourceTree = "<group>"; };
+		5B6D568524A5D04D00411281 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		5B6D568824A5D11300411281 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		5B6D568B24A5D21400411281 /* TextViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewRepresentable.swift; sourceTree = "<group>"; };
+		5B6D568E24A5D44900411281 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		5BDCCB4324A591FA00344958 /* UIToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDCCB4624A591FA00344958 /* UIToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIToolbox.h; sourceTree = "<group>"; };
 		5BDCCB4724A591FA00344958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,6 +168,8 @@
 		5B6D567024A5AED400411281 /* Textfields */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D567424A5BAA200411281 /* PasswordField.swift */,
+				5B6D567924A5C78400411281 /* FormTextfield.swift */,
 			);
 			path = Textfields;
 			sourceTree = "<group>";
@@ -158,6 +180,70 @@
 				5B6D567224A5AF7400411281 /* SearchBarView.swift */,
 			);
 			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		5B6D567624A5BFE000411281 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D567724A5C01500411281 /* ReusableCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		5B6D567B24A5CC1100411281 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D567C24A5CC1E00411281 /* BottomSheet.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		5B6D567E24A5CC9600411281 /* Utils&Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D567F24A5CCB400411281 /* UIToolboxUtils.swift */,
+			);
+			path = "Utils&Extensions";
+			sourceTree = "<group>";
+		};
+		5B6D568124A5CE5600411281 /* SparkViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D568224A5CE6500411281 /* SparkView.swift */,
+			);
+			path = SparkViews;
+			sourceTree = "<group>";
+		};
+		5B6D568424A5D03D00411281 /* Animations&Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D568524A5D04D00411281 /* Transitions.swift */,
+			);
+			path = "Animations&Transitions";
+			sourceTree = "<group>";
+		};
+		5B6D568724A5D0FC00411281 /* WebViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D568824A5D11300411281 /* WebView.swift */,
+			);
+			path = WebViews;
+			sourceTree = "<group>";
+		};
+		5B6D568A24A5D20500411281 /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D568B24A5D21400411281 /* TextViewRepresentable.swift */,
+			);
+			path = TextViews;
+			sourceTree = "<group>";
+		};
+		5B6D568D24A5D43300411281 /* Activity Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D568E24A5D44900411281 /* ActivityIndicator.swift */,
+			);
+			path = "Activity Indicators";
 			sourceTree = "<group>";
 		};
 		5BDCCB3924A591FA00344958 = {
@@ -189,7 +275,11 @@
 			isa = PBXGroup;
 			children = (
 				5BDCCB4624A591FA00344958 /* UIToolbox.h */,
+				5B6D568424A5D03D00411281 /* Animations&Transitions */,
+				5B6D567E24A5CC9600411281 /* Utils&Extensions */,
 				5BDCCB4724A591FA00344958 /* Info.plist */,
+				5B6D568124A5CE5600411281 /* SparkViews */,
+				5B6D567B24A5CC1100411281 /* BottomSheet */,
 				5BDCCBA424A5AC4000344958 /* Representables */,
 				5BDCCB9C24A59A9400344958 /* Buttons */,
 				5BDCCB9D24A59A9800344958 /* Grids */,
@@ -276,6 +366,10 @@
 		5BDCCBA424A5AC4000344958 /* Representables */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D568D24A5D43300411281 /* Activity Indicators */,
+				5B6D568A24A5D20500411281 /* TextViews */,
+				5B6D568724A5D0FC00411281 /* WebViews */,
+				5B6D567624A5BFE000411281 /* CollectionView */,
 				5B6D567124A5AF0200411281 /* SearchBar */,
 				5BDCCBA724A5AC8500344958 /* TabBar */,
 			);
@@ -494,11 +588,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDCCBA124A59AB700344958 /* GridLayout.swift in Sources */,
+				5B6D567A24A5C78400411281 /* FormTextfield.swift in Sources */,
+				5B6D568324A5CE6500411281 /* SparkView.swift in Sources */,
+				5B6D567824A5C01500411281 /* ReusableCollectionView.swift in Sources */,
 				5BDCCB9524A5926600344958 /* LargeButton.swift in Sources */,
 				5BDCCBA024A59AB700344958 /* Grid.swift in Sources */,
+				5B6D568C24A5D21400411281 /* TextViewRepresentable.swift in Sources */,
+				5B6D568024A5CCB400411281 /* UIToolboxUtils.swift in Sources */,
+				5B6D568624A5D04D00411281 /* Transitions.swift in Sources */,
 				5BDCCBA624A5AC6900344958 /* TabBarView.swift in Sources */,
+				5B6D567D24A5CC1E00411281 /* BottomSheet.swift in Sources */,
+				5B6D567524A5BAA200411281 /* PasswordField.swift in Sources */,
+				5B6D568F24A5D44900411281 /* ActivityIndicator.swift in Sources */,
 				5B6D567324A5AF7400411281 /* SearchBarView.swift in Sources */,
 				5BDCCBA324A5A81400344958 /* CircleButton.swift in Sources */,
+				5B6D568924A5D11300411281 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

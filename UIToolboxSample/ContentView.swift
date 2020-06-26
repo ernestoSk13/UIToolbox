@@ -11,7 +11,10 @@ import UIToolbox
 
 struct ContentView: View {
     var body: some View {
-        LargeButton()
+        LargeButton(title: "Hello") {
+            
+        }
+        .padding()
     }
 }
 
