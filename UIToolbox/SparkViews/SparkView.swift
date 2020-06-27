@@ -19,7 +19,7 @@ public struct SparkView: View {
     
     public init(message: String,
          undoTitle: String = "Undo",
-         undoAction: (() -> ())?,
+         undoAction: (() -> ())? = nil,
          forError: Bool = false,
          sparkColor: Color = .blue,
          errorColor: Color = .red,
@@ -36,23 +36,25 @@ public struct SparkView: View {
     public var body: some View {
         VStack {
             Spacer()
-            HStack {
-                Text(message).font(.caption).padding(.leading, 20).foregroundColor(Color.white)
+            VStack {
                 Spacer()
-                if undoAction != nil {
-                    Button(action: {
-                        self.undoAction!()
-                    }, label: {
-                        Text(self.undoTitle)
-                    })
+                HStack {
+                    Text(message).font(.body).padding(.leading, 20).foregroundColor(Color.white)
+                    Spacer()
+                    if undoAction != nil {
+                        Button(action: {
+                            self.undoAction!()
+                        }, label: {
+                            Text(self.undoTitle)
+                        }).padding(.trailing, 10).foregroundColor(Color.white)
+                    }
                 }
-            }
-            Spacer()
-        }.background(forError ? errorColor : sparkColor)
-            .frame(height: self.height)
-            .padding(.bottom, 0)
-            .transition(AnyTransition.offset(x: 0, y: UIDevice.currentDeviceHeight))
-            .animation(.easeInOut(duration: 1.0))
+                Spacer()
+            }.background(forError ? errorColor : sparkColor)
+                .frame(height: self.height)
+                .padding(.bottom, 0)
+                .transition(AnyTransition.opacity.combined(with: .offset(x: 0, y: UIDevice.currentDeviceHeight + 100)))
+        }
     }
 }
 
@@ -60,12 +62,10 @@ struct SparkView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             VStack {
-                Spacer()
                 SparkView(message: "Success!", undoAction: nil)
             }
             
             VStack {
-                Spacer()
                 SparkView(message: "Error",
                           undoAction: nil, forError: true)
             }

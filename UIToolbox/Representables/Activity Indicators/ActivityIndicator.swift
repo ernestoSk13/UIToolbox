@@ -8,18 +8,23 @@
 
 import SwiftUI
 
-struct ActivityIndicator: UIViewRepresentable {
+public struct ActivityIndicator: UIViewRepresentable {
     let color: UIColor
     let style: UIActivityIndicatorView.Style
 
-    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+    public init(color: UIColor = UIColor.lightGray, style: UIActivityIndicatorView.Style = .large) {
+        self.color = color
+        self.style = style
+    }
+    
+    public func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(style: style)
         activityIndicator.color = color
         activityIndicator.startAnimating()
         return activityIndicator
     }
 
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
  
     }
 }

@@ -9,8 +9,8 @@
 import SwiftUI
 import UIKit
 
-struct TextViewRepresentable: UIViewRepresentable {
-    typealias UIViewType = UITextView
+public struct TextViewRepresentable: UIViewRepresentable {
+    public typealias UIViewType = UITextView
     @Binding var text: String
     var font: UIFont = UIFont.systemFont(ofSize: 12)
     var textColor = UIColor.label
@@ -18,7 +18,21 @@ struct TextViewRepresentable: UIViewRepresentable {
     var isEditable = true
     var attributedString: NSAttributedString?
     
-    func makeUIView(context: Context) -> UITextView {
+    public init(text: Binding<String>,
+                font: UIFont = UIFont.systemFont(ofSize: 12),
+                textColor: UIColor = UIColor.label,
+                background: UIColor = UIColor.systemBackground,
+                isEditable: Bool = true,
+                attributedString: NSAttributedString? = nil) {
+        _text = text
+        self.font = font
+        self.textColor = textColor
+        self.background = background
+        self.isEditable = isEditable
+        self.attributedString = attributedString
+    }
+    
+    public func makeUIView(context: Context) -> UITextView {
         let textView = UITextView(frame: .zero)
         DispatchQueue.main.async {
             if let attributedText = self.attributedString {
@@ -34,7 +48,7 @@ struct TextViewRepresentable: UIViewRepresentable {
         return textView
     }
     
-    func updateUIView(_ uiView: UITextView, context: Context) {
+    public func updateUIView(_ uiView: UITextView, context: Context) {
         uiView.textColor = textColor
     }
 }

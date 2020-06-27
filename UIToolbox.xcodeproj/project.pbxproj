@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2378F824A663DD00D0530F /* ButtonsSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2378F724A663DD00D0530F /* ButtonsSampleView.swift */; };
+		5B2378FA24A66F1600D0530F /* TextfieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2378F924A66F1600D0530F /* TextfieldSampleView.swift */; };
 		5B6D567324A5AF7400411281 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567224A5AF7400411281 /* SearchBarView.swift */; };
 		5B6D567524A5BAA200411281 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567424A5BAA200411281 /* PasswordField.swift */; };
 		5B6D567824A5C01500411281 /* ReusableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D567724A5C01500411281 /* ReusableCollectionView.swift */; };
@@ -18,6 +20,12 @@
 		5B6D568924A5D11300411281 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568824A5D11300411281 /* WebView.swift */; };
 		5B6D568C24A5D21400411281 /* TextViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568B24A5D21400411281 /* TextViewRepresentable.swift */; };
 		5B6D568F24A5D44900411281 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D568E24A5D44900411281 /* ActivityIndicator.swift */; };
+		5B9BF66324A676D70029300B /* GridSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BF66224A676D70029300B /* GridSampleView.swift */; };
+		5B9BF66524A683450029300B /* TextViewSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BF66424A683450029300B /* TextViewSampleView.swift */; };
+		5B9BF66724A6F4A50029300B /* SearchBarSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BF66624A6F4A50029300B /* SearchBarSampleView.swift */; };
+		5B9BF66924A6F4C60029300B /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9BF66824A6F4C60029300B /* SectionHeaderView.swift */; };
+		5BAA231124A6FBD500E664BF /* SparkSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA231024A6FBD500E664BF /* SparkSampleView.swift */; };
+		5BAA231324A7027400E664BF /* WebSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA231224A7027400E664BF /* WebSampleView.swift */; };
 		5BDCCB4D24A591FB00344958 /* UIToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDCCB4324A591FA00344958 /* UIToolbox.framework */; };
 		5BDCCB5224A591FB00344958 /* UIToolboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCCB5124A591FB00344958 /* UIToolboxTests.swift */; };
 		5BDCCB5424A591FB00344958 /* UIToolbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDCCB4624A591FA00344958 /* UIToolbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,6 +93,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B2378F724A663DD00D0530F /* ButtonsSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSampleView.swift; sourceTree = "<group>"; };
+		5B2378F924A66F1600D0530F /* TextfieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldSampleView.swift; sourceTree = "<group>"; };
 		5B6D567224A5AF7400411281 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5B6D567424A5BAA200411281 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		5B6D567724A5C01500411281 /* ReusableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionView.swift; sourceTree = "<group>"; };
@@ -96,6 +106,12 @@
 		5B6D568824A5D11300411281 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		5B6D568B24A5D21400411281 /* TextViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewRepresentable.swift; sourceTree = "<group>"; };
 		5B6D568E24A5D44900411281 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5B9BF66224A676D70029300B /* GridSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSampleView.swift; sourceTree = "<group>"; };
+		5B9BF66424A683450029300B /* TextViewSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewSampleView.swift; sourceTree = "<group>"; };
+		5B9BF66624A6F4A50029300B /* SearchBarSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarSampleView.swift; sourceTree = "<group>"; };
+		5B9BF66824A6F4C60029300B /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		5BAA231024A6FBD500E664BF /* SparkSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkSampleView.swift; sourceTree = "<group>"; };
+		5BAA231224A7027400E664BF /* WebSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSampleView.swift; sourceTree = "<group>"; };
 		5BDCCB4324A591FA00344958 /* UIToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDCCB4624A591FA00344958 /* UIToolbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIToolbox.h; sourceTree = "<group>"; };
 		5BDCCB4724A591FA00344958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +181,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2378F624A663CA00D0530F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5B2378F724A663DD00D0530F /* ButtonsSampleView.swift */,
+				5B2378F924A66F1600D0530F /* TextfieldSampleView.swift */,
+				5B9BF66224A676D70029300B /* GridSampleView.swift */,
+				5B9BF66424A683450029300B /* TextViewSampleView.swift */,
+				5B9BF66624A6F4A50029300B /* SearchBarSampleView.swift */,
+				5B9BF66824A6F4C60029300B /* SectionHeaderView.swift */,
+				5BAA231024A6FBD500E664BF /* SparkSampleView.swift */,
+				5BAA231224A7027400E664BF /* WebSampleView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5B6D567024A5AED400411281 /* Textfields */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,9 +280,9 @@
 		5BDCCB3924A591FA00344958 = {
 			isa = PBXGroup;
 			children = (
+				5BDCCB6224A5923D00344958 /* UIToolboxSample */,
 				5BDCCB4524A591FA00344958 /* UIToolbox */,
 				5BDCCB5024A591FB00344958 /* UIToolboxTests */,
-				5BDCCB6224A5923D00344958 /* UIToolboxSample */,
 				5BDCCB7C24A5924100344958 /* UIToolboxSampleTests */,
 				5BDCCB8724A5924100344958 /* UIToolboxSampleUITests */,
 				5BDCCB4424A591FA00344958 /* Products */,
@@ -303,6 +334,7 @@
 				5BDCCB6324A5923D00344958 /* AppDelegate.swift */,
 				5BDCCB6524A5923D00344958 /* SceneDelegate.swift */,
 				5BDCCB6A24A5923D00344958 /* ContentView.swift */,
+				5B2378F624A663CA00D0530F /* Components */,
 				5BDCCB6C24A5924000344958 /* Assets.xcassets */,
 				5BDCCB7124A5924000344958 /* LaunchScreen.storyboard */,
 				5BDCCB7424A5924000344958 /* Info.plist */,
@@ -618,8 +650,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9BF66524A683450029300B /* TextViewSampleView.swift in Sources */,
+				5BAA231324A7027400E664BF /* WebSampleView.swift in Sources */,
+				5B2378F824A663DD00D0530F /* ButtonsSampleView.swift in Sources */,
+				5B9BF66724A6F4A50029300B /* SearchBarSampleView.swift in Sources */,
+				5B9BF66324A676D70029300B /* GridSampleView.swift in Sources */,
 				5BDCCB6424A5923D00344958 /* AppDelegate.swift in Sources */,
+				5B2378FA24A66F1600D0530F /* TextfieldSampleView.swift in Sources */,
 				5BDCCB6924A5923D00344958 /* UIToolboxSample.xcdatamodeld in Sources */,
+				5B9BF66924A6F4C60029300B /* SectionHeaderView.swift in Sources */,
+				5BAA231124A6FBD500E664BF /* SparkSampleView.swift in Sources */,
 				5BDCCB6B24A5923D00344958 /* ContentView.swift in Sources */,
 				5BDCCB6624A5923D00344958 /* SceneDelegate.swift in Sources */,
 			);

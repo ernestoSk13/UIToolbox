@@ -9,17 +9,21 @@
 import SwiftUI
 import WebKit
 
-struct WebView: UIViewRepresentable {
-    
-    func makeCoordinator() -> WebView.Coordinator {
+public struct WebView: UIViewRepresentable {
+    public func makeCoordinator() -> WebView.Coordinator {
         Coordinator(self)
     }
     
     let request: URLRequest
-    var firstRequestFinished = false
+    var firstRequestFinished: Bool
     @Environment(\.presentationMode) var presentationMode
     
-    class Coordinator: NSObject, WKNavigationDelegate {
+    public init(request: URLRequest, firstRequestFinished: Bool = false) {
+        self.request = request
+        self.firstRequestFinished = firstRequestFinished
+    }
+    
+    public class Coordinator: NSObject, WKNavigationDelegate {
         var parent: WebView?
         
         init(_ parent: WebView) {
@@ -27,14 +31,14 @@ struct WebView: UIViewRepresentable {
         }
     }
     
-    func makeUIView(context: Context) -> WKWebView {
+    public func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
         webView.load(request)
         return webView
     }
     
-    func updateUIView(_ uiView: WKWebView, context: Context) { }
+    public func updateUIView(_ uiView: WKWebView, context: Context) { }
 }
 
 extension WKWebView {

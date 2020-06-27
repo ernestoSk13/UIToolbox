@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIDevice {
+public extension UIDevice {
     static var currentDeviceWidth: CGFloat {
         return UIScreen.main.bounds.size.width
     }
@@ -46,4 +46,18 @@ extension String {
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
     }
+}
+
+public enum ComponentTypes: String, CaseIterable {
+    case button = "Buttons"
+    case textfield = "Textfields"
+    case textView = "TextViews"
+    case searchBar = "Search Bars"
+    case spark = "Spark Views"
+    case webView = "WebView"
+    case collectionView = "Collections/Grids"
+    case bottomSheet = "Bottom Sheets"
+    case activityIndicators = "Activity Indicators"
+    case tabBar = "Tab Bars"
+    case animations = "Animations"
 }
