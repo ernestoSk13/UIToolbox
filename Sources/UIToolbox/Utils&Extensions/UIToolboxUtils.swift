@@ -62,4 +62,6 @@ public enum ComponentTypes: String, CaseIterable {
     case tabBar = "Tab Bars"
     case animations = "Animations"
 }
+
+let listSampleData = ["Red", "Yellow", "Green", "Black", "White", "Orange", "Blue", "Grey"]
 #endif

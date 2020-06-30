@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		5B16F73724A81F1D00BBEDF2 /* UTBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */; };
+		5B2B30C724AB90B300DC3792 /* SearchableViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B30C624AB90B300DC3792 /* SearchableViewRepresentable.swift */; };
 		5BB836A224AADB7600F947B2 /* SUITModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB836A124AADB7600F947B2 /* SUITModifiers.swift */; };
 		OBJ_55 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Transitions.swift */; };
 		OBJ_56 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BottomSheet.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTBProgressView.swift; sourceTree = "<group>"; };
+		5B2B30C624AB90B300DC3792 /* SearchableViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableViewRepresentable.swift; sourceTree = "<group>"; };
 		5BB836A124AADB7600F947B2 /* SUITModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUITModifiers.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		OBJ_12 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
+		5B2B30C524AB902E00DC3792 /* Search Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B30C624AB90B300DC3792 /* SearchableViewRepresentable.swift */,
+			);
+			path = "Search Controller";
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 				OBJ_20 /* Activity Indicators */,
 				OBJ_22 /* CollectionView */,
 				OBJ_24 /* SearchBar */,
+				5B2B30C524AB902E00DC3792 /* Search Controller */,
 				OBJ_26 /* TabBar */,
 				OBJ_28 /* TextViews */,
 				OBJ_30 /* WebViews */,
@@ -389,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				5B2B30C724AB90B300DC3792 /* SearchableViewRepresentable.swift in Sources */,
 				OBJ_55 /* Transitions.swift in Sources */,
 				OBJ_56 /* BottomSheet.swift in Sources */,
 				OBJ_57 /* CircleButton.swift in Sources */,
