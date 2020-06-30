@@ -9,18 +9,19 @@
 import SwiftUI
 import WebKit
 #if targetEnvironment(macCatalyst) || os(iOS)
+/// A `UIViewRepresentable` of `WKWebView` that can be used in SwiftUI
 public struct WebView: UIViewRepresentable {
     public func makeCoordinator() -> WebView.Coordinator {
         Coordinator(self)
     }
-    
     let request: URLRequest
-    var firstRequestFinished: Bool
     @Environment(\.presentationMode) var presentationMode
     
-    public init(request: URLRequest, firstRequestFinished: Bool = false) {
+    /// Creates an instance of `WKWebView`
+    /// - Parameters:
+    ///   - request: The request specifying the URL to navigate to.
+    public init(request: URLRequest) {
         self.request = request
-        self.firstRequestFinished = firstRequestFinished
     }
     
     public class Coordinator: NSObject, WKNavigationDelegate {

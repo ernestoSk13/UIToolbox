@@ -8,6 +8,7 @@
 
 import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
+///  A `UIViewReprentable` that will draw a Textfield that can be used in SwiftUI to have access to delegate methods.
 public struct SearchBarView: UIViewRepresentable {
     @Binding var text: String
     @Binding var placeholder: String
@@ -16,6 +17,13 @@ public struct SearchBarView: UIViewRepresentable {
     var textfieldChangedHandler: ((String) -> Void)?
     var onCommitHandler: (() -> Void)?
     
+    /// Creates an instance of UIKit's `UITextField`
+    /// - Parameters:
+    ///   - text: The text displayed and edited by the text field.
+    ///   - placeholder: The string that is displayed when there is no other text in the text field.
+    ///   - isOnFocus: A bool that indicates  if the current text field is focused.
+    ///   - textfieldChangedHandler: a block that will be executed every time the text field changes it's value.
+    ///   - onCommitHandler: a block that is executed when the user taps on the `Done` key.
     public init(text: Binding<String>,
          placeholder: Binding<String>,
          isOnFocus: Binding<Bool>,

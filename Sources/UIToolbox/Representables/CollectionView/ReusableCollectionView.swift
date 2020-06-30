@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-///WIP
+// WIP- Still working on this awesome component
 //class IdentifiableCollectionCell: UICollectionViewCell {
 //    static let reuseIdentifer = "\(IdentifiableCollectionCell.self)"
 //}

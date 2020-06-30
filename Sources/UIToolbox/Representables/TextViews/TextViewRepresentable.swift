@@ -10,6 +10,7 @@ import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
 import UIKit
 
+/// A `UIViewRepresentable` of UIKit's `UITextView` that can be used in SwiftUI.
 public struct TextViewRepresentable: UIViewRepresentable {
     public typealias UIViewType = UITextView
     @Binding var text: String
@@ -19,6 +20,14 @@ public struct TextViewRepresentable: UIViewRepresentable {
     var isEditable = true
     var attributedString: NSAttributedString?
     
+    /// Creates an instance of UITextView's representable
+    /// - Parameters:
+    ///   - text: The  editable text displayed by the text view.
+    ///   - font: The font of the text. System Font with 12 points of size as default.
+    ///   - textColor: The color of the current text.
+    ///   - background: The background color of the text view.
+    ///   - isEditable: Determines if the text view is editable.
+    ///   - attributedString: The styled text displayed by the text view.
     public init(text: Binding<String>,
                 font: UIFont = UIFont.systemFont(ofSize: 12),
                 textColor: UIColor = UIColor.label,
