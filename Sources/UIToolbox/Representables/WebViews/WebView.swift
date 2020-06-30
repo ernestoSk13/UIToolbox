@@ -8,7 +8,7 @@
 
 import SwiftUI
 import WebKit
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct WebView: UIViewRepresentable {
     public func makeCoordinator() -> WebView.Coordinator {
         Coordinator(self)

@@ -15,7 +15,7 @@ public enum DataType: String, CaseIterable, Hashable, Codable {
     case email = "email"
 }
 
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct FormTextfield: View {
     @Binding var text: String
     var placeholder: String

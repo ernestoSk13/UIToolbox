@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct ActivityIndicator: UIViewRepresentable {
     let color: UIColor
     let style: UIActivityIndicatorView.Style

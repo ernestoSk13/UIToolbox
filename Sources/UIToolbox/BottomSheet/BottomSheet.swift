@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 fileprivate enum BottomsheetConstants {
     static let radius: CGFloat = 16
     static let indicatorHeight: CGFloat = 6

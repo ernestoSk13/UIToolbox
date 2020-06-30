@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct CircleButton: View {
     var circleColor: Color
     var fontColor: Color

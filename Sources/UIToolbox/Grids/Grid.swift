@@ -49,7 +49,7 @@ public struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View 
     }
 }
 
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 struct Grid_Previews: PreviewProvider {
     static let images: [String] = ["thermometer", "cloud.moon.bolt.fill", "sunrise.fill",
                   "sun.max", "moon.fill", "cloud.rain",

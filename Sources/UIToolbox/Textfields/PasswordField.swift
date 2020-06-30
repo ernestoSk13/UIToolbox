@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct PasswordField: View {
     @Binding var text: String
     var placeholder: String

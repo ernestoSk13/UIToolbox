@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct TabBarWrapper: View {
     var controllers: [UIHostingController<TabBarElement>]
     

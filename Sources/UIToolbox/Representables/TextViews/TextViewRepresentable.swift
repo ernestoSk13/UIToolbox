@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 import UIKit
 
 public struct TextViewRepresentable: UIViewRepresentable {

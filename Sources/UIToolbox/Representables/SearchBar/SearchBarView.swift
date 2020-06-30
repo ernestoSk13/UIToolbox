@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct SearchBarView: UIViewRepresentable {
     @Binding var text: String
     @Binding var placeholder: String

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 import UIKit
 
 public extension UIDevice {
