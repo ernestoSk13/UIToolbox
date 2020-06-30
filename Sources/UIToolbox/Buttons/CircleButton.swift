@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct CircleButton: View {
     var circleColor: Color
     var fontColor: Color
@@ -117,3 +117,4 @@ struct CircleButton_Previews: PreviewProvider {
         }
     }
 }
+#endif

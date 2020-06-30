@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct PasswordField: View {
     @Binding var text: String
     var placeholder: String
@@ -69,3 +69,4 @@ struct PasswordField_Previews: PreviewProvider {
         }
     }
 }
+#endif

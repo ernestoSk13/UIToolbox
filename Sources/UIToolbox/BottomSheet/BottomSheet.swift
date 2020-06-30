@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 fileprivate enum BottomsheetConstants {
     static let radius: CGFloat = 16
     static let indicatorHeight: CGFloat = 6
@@ -116,3 +116,4 @@ struct BottomSheet_Previews: PreviewProvider {
         }
     }
 }
+#endif

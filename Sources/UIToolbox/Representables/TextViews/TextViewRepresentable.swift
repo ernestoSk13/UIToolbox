@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+#if !os(macOS)
 import UIKit
 
 public struct TextViewRepresentable: UIViewRepresentable {
@@ -66,3 +67,4 @@ struct TextViewRepresentable_Previews: PreviewProvider {
         }
     }
 }
+#endif

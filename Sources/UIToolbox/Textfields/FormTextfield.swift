@@ -15,6 +15,7 @@ public enum DataType: String, CaseIterable, Hashable, Codable {
     case email = "email"
 }
 
+#if !os(macOS)
 public struct FormTextfield: View {
     @Binding var text: String
     var placeholder: String
@@ -112,3 +113,4 @@ struct FormTextfield_Previews: PreviewProvider {
         }
     }
 }
+#endif

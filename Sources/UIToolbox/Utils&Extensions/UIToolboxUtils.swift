@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#if !os(macOS)
 import UIKit
 
 public extension UIDevice {
@@ -61,3 +62,4 @@ public enum ComponentTypes: String, CaseIterable {
     case tabBar = "Tab Bars"
     case animations = "Animations"
 }
+#endif

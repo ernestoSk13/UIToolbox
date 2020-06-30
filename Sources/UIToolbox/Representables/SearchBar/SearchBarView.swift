@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct SearchBarView: UIViewRepresentable {
     @Binding var text: String
     @Binding var placeholder: String
@@ -139,3 +139,4 @@ struct SearchBarView_Previews: PreviewProvider {
         }
     }
 }
+#endif

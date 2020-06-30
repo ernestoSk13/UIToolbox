@@ -8,7 +8,7 @@
 
 import SwiftUI
 import WebKit
-
+#if !os(macOS)
 public struct WebView: UIViewRepresentable {
     public func makeCoordinator() -> WebView.Coordinator {
         Coordinator(self)
@@ -57,3 +57,4 @@ struct WebView_Previews: PreviewProvider {
         }
     }
 }
+#endif

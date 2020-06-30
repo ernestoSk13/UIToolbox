@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct SparkView: View {
     var message: String
     var undoTitle: String
@@ -72,3 +72,4 @@ struct SparkView_Previews: PreviewProvider {
         }
     }
 }
+#endif

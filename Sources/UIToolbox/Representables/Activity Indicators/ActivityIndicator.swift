@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct ActivityIndicator: UIViewRepresentable {
     let color: UIColor
     let style: UIActivityIndicatorView.Style
@@ -34,3 +34,4 @@ struct ActivityIndicator_Previews: PreviewProvider {
         ActivityIndicator(color: .gray, style: .large)
     }
 }
+#endif

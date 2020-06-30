@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public enum ButtonStyle {
     case bordered
     case filled
@@ -118,3 +118,4 @@ struct LargeButton_Previews: PreviewProvider {
         }
     }
 }
+#endif

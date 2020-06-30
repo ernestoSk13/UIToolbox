@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+#if !os(macOS)
 public struct TabBarWrapper: View {
     var controllers: [UIHostingController<TabBarElement>]
     
@@ -129,3 +129,4 @@ struct TabBar_Previews: PreviewProvider {
         }
     }
 }
+#endif
