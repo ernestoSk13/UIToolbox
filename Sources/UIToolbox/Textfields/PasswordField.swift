@@ -8,12 +8,18 @@
 
 import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
+/// A custom Password textfield that can show/hide the typed password.
 public struct PasswordField: View {
     @Binding var text: String
     var placeholder: String
     var showable: Bool
     @State private var showPassword: Bool = false
     
+    /// Creates an instance
+    /// - Parameters:
+    ///   - text: The text that will be display and edited.
+    ///   - placeholder: The place holder that will appear in the current text field
+    ///   - showable: Determines if the "show password" button is going to appear.
     public init(text: Binding<String>,
          placeholder: String,
          showable: Bool = false) {

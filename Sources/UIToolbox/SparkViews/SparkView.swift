@@ -8,8 +8,9 @@
 
 import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
-public struct SparkView: View {
-    var message: String
+/// A view that can be used to provide feedback to the user whenever a task finishes.
+public struct SparkView<Label>: View where Label: View {
+    var content: Label
     var undoTitle: String
     var undoAction: (() -> ())?
     var forError = false
@@ -17,14 +18,23 @@ public struct SparkView: View {
     var errorColor: Color
     var height: CGFloat
     
-    public init(message: String,
-         undoTitle: String = "Undo",
-         undoAction: (() -> ())? = nil,
-         forError: Bool = false,
-         sparkColor: Color = .blue,
-         errorColor: Color = .red,
-         height: CGFloat = 40) {
-        self.message = message
+    /// Creates an instance
+    /// - Parameters:
+    ///   - label: A generic view used to show the message inside the spark.
+    ///   - undoTitle: A String that will be set to a button at the right of the spark.
+    ///   - undoAction: An action that will be executed when the undo button is tapped.
+    ///   - forError: Determines if the spark is showing an error.
+    ///   - sparkColor: The background color of the current spark.
+    ///   - errorColor: The background color used for error messages.
+    ///   - height: The height of the current spark.
+    public init(@ViewBuilder label: () -> Label,
+                             undoTitle: String = "Undo",
+                             undoAction: (() -> ())? = nil,
+                             forError: Bool = false,
+                             sparkColor: Color = .blue,
+                             errorColor: Color = .red,
+                             height: CGFloat = 40) {
+        self.content = label()
         self.undoTitle = undoTitle
         self.undoAction = undoAction
         self.forError = forError
@@ -39,7 +49,7 @@ public struct SparkView: View {
             VStack {
                 Spacer()
                 HStack {
-                    Text(message).font(.body).padding(.leading, 20).foregroundColor(Color.white)
+                    self.content.padding(.leading, 10).foregroundColor(Color.white)
                     Spacer()
                     if undoAction != nil {
                         Button(action: {
@@ -61,12 +71,18 @@ struct SparkView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             VStack {
-                SparkView(message: "Success!", undoAction: nil)
+                SparkView(label: {
+                    Text("Success!")
+                }, undoAction: { })
             }
             
             VStack {
-                SparkView(message: "Error",
-                          undoAction: nil, forError: true)
+                SparkView(label: {
+                    HStack{
+                        Image(systemName: "xmark")
+                        Text("Error")
+                    }
+                },undoAction: nil, forError: true)
             }
         }
     }
