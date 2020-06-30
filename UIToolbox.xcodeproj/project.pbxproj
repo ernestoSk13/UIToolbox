@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		5B16F73724A81F1D00BBEDF2 /* UTBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */; };
+		5B514C3424AAD01600DD7AC7 /* ComponentLibraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B514C3324AAD01600DD7AC7 /* ComponentLibraries.swift */; };
 		OBJ_55 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Transitions.swift */; };
 		OBJ_56 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BottomSheet.swift */; };
 		OBJ_57 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CircleButton.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTBProgressView.swift; sourceTree = "<group>"; };
+		5B514C3324AAD01600DD7AC7 /* ComponentLibraries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentLibraries.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		OBJ_12 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		OBJ_37 /* Utils&Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5B514C3324AAD01600DD7AC7 /* ComponentLibraries.swift */,
 				OBJ_38 /* UIToolboxUtils.swift */,
 			);
 			path = "Utils&Extensions";
@@ -255,7 +258,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -267,7 +270,6 @@
 				OBJ_48 /* UIToolboxSample */,
 				OBJ_49 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -369,7 +371,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +406,7 @@
 				OBJ_68 /* FormTextfield.swift in Sources */,
 				OBJ_69 /* PasswordField.swift in Sources */,
 				OBJ_70 /* UIToolboxUtils.swift in Sources */,
+				5B514C3424AAD01600DD7AC7 /* ComponentLibraries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
