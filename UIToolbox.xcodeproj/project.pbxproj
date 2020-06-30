@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		5B16F73724A81F1D00BBEDF2 /* UTBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */; };
+		5BB836A224AADB7600F947B2 /* SUITModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB836A124AADB7600F947B2 /* SUITModifiers.swift */; };
 		5B514C3424AAD01600DD7AC7 /* ComponentLibraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B514C3324AAD01600DD7AC7 /* ComponentLibraries.swift */; };
 		OBJ_55 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Transitions.swift */; };
 		OBJ_56 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BottomSheet.swift */; };
@@ -301,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* Transitions.swift */,
+				5BB836A124AADB7600F947B2 /* SUITModifiers.swift */,
 			);
 			path = "Animations&Transitions";
 			sourceTree = "<group>";
@@ -398,6 +400,7 @@
 				OBJ_60 /* GridLayout.swift in Sources */,
 				OBJ_61 /* ActivityIndicator.swift in Sources */,
 				OBJ_62 /* ReusableCollectionView.swift in Sources */,
+				5BB836A224AADB7600F947B2 /* SUITModifiers.swift in Sources */,
 				OBJ_63 /* SearchBarView.swift in Sources */,
 				OBJ_64 /* TabBarView.swift in Sources */,
 				OBJ_65 /* TextViewRepresentable.swift in Sources */,

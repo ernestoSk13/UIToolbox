@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if targetEnvironment(macCatalyst) || os(iOS)
 struct UTBProgressView: View {
     var backgroundColor: Color
     
@@ -30,3 +31,4 @@ struct UTBProgressView_Previews: PreviewProvider {
         .padding()
     }
 }
+#endif

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// An enum that represents the type of data that can be used in a textfield
 public enum DataType: String, CaseIterable, Hashable, Codable {
     case text = "text"
     case url = "url"
@@ -15,24 +16,33 @@ public enum DataType: String, CaseIterable, Hashable, Codable {
     case email = "email"
 }
 
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
+/// A textfiled that can be used in forms or other formularies.
 public struct FormTextfield: View {
     @Binding var text: String
     var placeholder: String
     var textfieldTitle: String
     var dataType: DataType?
-    var infoText: String
     var onCommit: (() -> ())?
     var keyboardType: UIKeyboardType = .default
     var showInfo: Bool = false
     var infoActions: (() -> ())?
     
+    /// Creates an instance
+    /// - Parameters:
+    ///   - text: The text to be displayed and edited.
+    ///   - placeholder: The placeholder to be displayed and edited.
+    ///   - textfieldTitle: The title that will be shown at the top of the current text field.
+    ///   - dataType: A `DataType` enum indicating the data expected in the textfield.
+    ///   - showInfo: Determines if an info button should be displayed to the right of the text field's title.
+    ///   - keyboardType: The type of keyboard to display for a given text-based view.
+    ///   - onCommit:  a block that is executed when the user taps on the `Done` key.
+    ///   - infoActions: a block that will be executed when the info button is tapped.
     public init(text: Binding<String>,
                 placeholder: String,
                 textfieldTitle: String,
                 dataType: DataType = .text,
                 showInfo: Bool = false,
-                infoText: String = "",
                 keyboardType: UIKeyboardType = .default,
                 onCommit: (() -> ())?,
                 infoActions: (() -> ())?) {
@@ -41,7 +51,6 @@ public struct FormTextfield: View {
         self.textfieldTitle = textfieldTitle
         self.dataType = dataType
         self.showInfo = showInfo
-        self.infoText = infoText
         self.keyboardType = keyboardType
         self.onCommit = onCommit
         self.infoActions = infoActions
@@ -87,7 +96,6 @@ struct FormTextfield_Previews: PreviewProvider {
                               textfieldTitle: "Teléfono",
                               dataType: .number,
                               showInfo: true,
-                              infoText: "Ayuda",
                                keyboardType: .numberPad,
                               onCommit: {
                                 
@@ -100,7 +108,6 @@ struct FormTextfield_Previews: PreviewProvider {
                               placeholder: "Teléfono",
                               textfieldTitle: "Teléfono",
                               dataType: .number,
-                              infoText: "Ayuda",
                               keyboardType: .numberPad,
                               onCommit: {
                                 

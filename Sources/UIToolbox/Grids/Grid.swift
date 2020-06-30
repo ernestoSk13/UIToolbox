@@ -14,11 +14,17 @@ public extension Grid where Item: Identifiable, ID == Item.ID {
     }
 }
 
+/// A dynamic grid that can contain multiple generic `View` items
 public struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View {
     private var items: [Item]
     private var id: KeyPath<Item,ID>
     private var viewForItem: (Item) -> ItemView
     
+    /// Creates an instance
+    /// - Parameters:
+    ///   - items: an array of `Item` models that will be used to populate the grid
+    ///   - id: The key path to the provided data’s identifier.
+    ///   - viewForItem: a closure that returns an `Item` model that can be used to draw values in the `ItemView` generic view.
     public init(_ items: [Item], id: KeyPath<Item,ID>, viewForItem: @escaping (Item) -> ItemView) {
         self.items = items
         self.id = id
@@ -49,7 +55,7 @@ public struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View 
     }
 }
 
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 struct Grid_Previews: PreviewProvider {
     static let images: [String] = ["thermometer", "cloud.moon.bolt.fill", "sunrise.fill",
                   "sun.max", "moon.fill", "cloud.rain",

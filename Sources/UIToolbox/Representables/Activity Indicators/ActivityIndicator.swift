@@ -7,11 +7,16 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
+/// A `UIViewReprentable` that will draw an activity indicator that is used to give user a feedback when something is loading in the background
 public struct ActivityIndicator: UIViewRepresentable {
     let color: UIColor
     let style: UIActivityIndicatorView.Style
-
+    
+    /// Creates an Activity Indicator instance.
+    /// - Parameters:
+    ///   - color: the color of tha activity indicator view
+    ///   - style: A constant that specifies the style of the object to be created. by defailt it is set to `.large`
     public init(color: UIColor = UIColor.lightGray, style: UIActivityIndicatorView.Style = .large) {
         self.color = color
         self.style = style

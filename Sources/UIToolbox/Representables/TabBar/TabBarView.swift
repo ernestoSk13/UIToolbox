@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
+/// A Tab Bar Wrapper that enhances the power of the UIKit's UITabBar
 public struct TabBarWrapper: View {
     var controllers: [UIHostingController<TabBarElement>]
     
+    /// Creates an instance of UITabBar
+    /// - Parameter elements: an array of generic views that contain the important information to build a UITabBarItem
     public init(_ elements: [TabBarElement]) {
         self.controllers = elements.enumerated().map {
             let hostingController = UIHostingController(rootView: $1)
@@ -33,6 +36,7 @@ public struct TabBarWrapper: View {
     }
 }
 
+/// A `UIViewControllerRepresentable` of UITabBarController tha can be used by SwiftUI.
 fileprivate struct TabbarControllerWrapper: UIViewControllerRepresentable {
     var viewControllers: [UIViewController]
     
@@ -61,6 +65,7 @@ fileprivate struct TabbarControllerWrapper: UIViewControllerRepresentable {
     }
 }
 
+/// A model that has the properties needed by `TabBarElement` to build a TabBarItem
 public struct TabBarElementItem {
     var title: String
     var systemIcon = true
@@ -70,6 +75,7 @@ public struct TabBarElementItem {
     var accessibilityIdentifier: String
 }
 
+/// A protocol that represents a Tab View
 protocol TabBarElementView: View {
     associatedtype Content
     
@@ -77,11 +83,16 @@ protocol TabBarElementView: View {
     var tabBarElementItem: TabBarElementItem { get set }
 }
 
+/// A view that implements the `TabBarElementView` protocol and that will be used to build a UITabBarView
 public struct TabBarElement: TabBarElementView {
     internal var content: AnyView
     
     var tabBarElementItem: TabBarElementItem
     
+    /// Creates an instance
+    /// - Parameters:
+    ///   - tabBarElementItem: an element that contains the needed information to build a tab.
+    ///   - content: a generic `Content` view that will be used to represent the content of the tab.
     public init<Content: View>(tabBarElementItem: TabBarElementItem, @ViewBuilder _ content: () -> Content) {
         self.tabBarElementItem = tabBarElementItem
         self.content = AnyView(content())

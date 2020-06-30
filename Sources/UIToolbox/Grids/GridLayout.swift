@@ -8,11 +8,17 @@
 
 import SwiftUI
 
+/// A Layout that will be used to calculate the number of rows and columns that fit the parent `Grid`
 struct GridLayout {
     private(set) var size: CGSize
     private(set) var rowCount: Int = 0
     private(set) var columnCount: Int = 0
     
+    /// Creates an instance
+    /// - Parameters:
+    ///   - itemCount: The total count of items to be drawing.
+    ///   - desiredAspectRatio: the ratio that is desired to fit the parent `Grid`
+    ///   - size: the space that will be occupied in the screen.
     init(itemCount: Int, nearAspectRatio desiredAspectRatio: Double = 1, in size: CGSize) {
         self.size = size
         guard size.width != 0, size.height != 0, itemCount > 0 else { return }
