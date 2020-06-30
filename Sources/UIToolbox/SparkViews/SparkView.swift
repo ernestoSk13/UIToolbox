@@ -53,7 +53,7 @@ public struct SparkView: View {
             }.background(forError ? errorColor : sparkColor)
                 .frame(height: self.height)
                 .padding(.bottom, 0)
-                .transition(AnyTransition.opacity.combined(with: .offset(x: 0, y: UIDevice.currentDeviceHeight + 100)))
+                .transition(AnyTransition.opacity.combined(with: .move(edge: .bottom)))
         }
     }
 }
