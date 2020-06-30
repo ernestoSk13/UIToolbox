@@ -8,29 +8,37 @@
 
 import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
+/// An enum of button styles
 public enum ButtonStyle {
     case bordered
     case filled
 }
 
-public struct LargeButton: View {
-    var title: String
-    var symbolName: String?
+/// A Large rectangled button with cornered radius.
+public struct LargeButton<Label>: View where Label: View {
+    var label: Label
     var action: (() -> ())
     var frame: (width: CGFloat?, height: CGFloat?)
     var color: Color
     var fontColor: Color
     var style: ButtonStyle
     
-    public init(title: String,
-                symbolName: String? = nil,
+    /// Creates an instance
+    /// - Parameters:
+    ///   - action: The action to perform when self is triggered.
+    ///   - label: A view that describes the effect of calling onTrigger.
+    ///   - frame: a tuple that has a width and height parameter. by default the width is dynamic and the height is 50
+    ///   - color: The background color (or border color if `style` is .bordered) of the rectangle. It is .blue by default.
+    ///   - fontColor: The foreground color that will be given to the `Label` passed. It is .white by default.
+    ///   - style:  the `ButtonStyle`  of the button. It is `.bordered` by default.
+    public init(action: @escaping (() -> ()),
+                @ViewBuilder label: () -> Label,
                 frame: (width: CGFloat?, height: CGFloat?) = (width: nil, height: 50),
-                color: Color = .blue, fontColor: Color = .white,
-                style: ButtonStyle = .filled,
-                action: @escaping (() -> ())) {
-        self.title = title
-        self.symbolName = symbolName
+                color: Color = .blue,
+                fontColor: Color = .white,
+                style: ButtonStyle = .filled) {
         self.action = action
+        self.label = label()
         self.frame = frame
         self.color = color
         if fontColor.hashValue != color.hashValue {
@@ -47,19 +55,11 @@ public struct LargeButton: View {
         }, label: {
             ZStack {
                RoundedRectangle(cornerRadius: 12).stroke(Color.clear)
-                HStack {
-                    if self.symbolName != nil {
-                        Image(systemName: self.symbolName!).padding(.leading, 20)
-                    }
-                    Text(title).padding(.horizontal, self.symbolName != nil ? 5 : 0)
-                    if self.symbolName != nil {
-                        Spacer()
-                    }
-                }.padding(.horizontal, 5)
+               self.label.foregroundColor(self.fontColor)
             }
         }).frame(width: frame.width, height: frame.height)
         .background(self.style == .filled ? color : .clear)
-            .foregroundColor(self.style == .bordered ? color : fontColor)
+        .foregroundColor(self.style == .bordered ? color : fontColor)
         .cornerRadius(self.style == .bordered ? 0 : 10)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
@@ -73,45 +73,40 @@ public struct LargeButton: View {
 struct LargeButton_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LargeButton(title: "Hello",
-                        action: {
+            LargeButton(action: {
                 
-                }).previewLayout(.sizeThatFits)
+            }, label: {
+                Text("Blue")
+            }).previewLayout(.sizeThatFits)
                 .padding()
                 .environment(\.colorScheme, .light)
                 .previewDisplayName("Default")
-            LargeButton(title: "Hello",
-                        color: Color.red,
-                        action: {
-                
-                }).previewLayout(.sizeThatFits)
+            LargeButton(action: { }, label: {
+                Text("Red")
+            }, color: .red)
+                .previewLayout(.sizeThatFits)
                 .padding()
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Custom Color")
-            LargeButton(title: "Hello",
-                        color: Color.green,
-                        action: {
-                            
-            }).previewLayout(.sizeThatFits)
+            LargeButton(action: {}, label: {
+                Text("Green")
+            }, color: .green).previewLayout(.sizeThatFits)
                 .padding()
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Custom Color")
-            LargeButton(title: "Hello",
-                        color: Color.blue,
-                        style: .bordered,
-                        action: {
-                            
-            }).previewLayout(.sizeThatFits)
+            LargeButton(action: {}, label: {
+                Text("Bordered")
+            }, color: .black, fontColor: .black, style: .bordered)
+                .previewLayout(.sizeThatFits)
                 .padding()
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Bordered")
-            LargeButton(title: "Hello",
-                        symbolName: "person",
-                        color: Color.blue,
-                        style: .bordered,
-                        action: {
-                            
-            }).previewLayout(.sizeThatFits)
+            LargeButton(action: { }, label: {
+                HStack {
+                    Image(systemName: "cart")
+                    Text("Buy")
+                }
+            }) .previewLayout(.sizeThatFits)
                 .padding()
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Bordered")
