@@ -7,47 +7,72 @@
 
 import SwiftUI
 
-@available(OSX 10.16, *)
+#if targetEnvironment(macCatalyst) || os(iOS)
 @available(iOS 14.0, *)
 public struct ButtonLibrary: LibraryContentProvider {
     @LibraryContentBuilder
     public var views: [LibraryItem] {
         LibraryItem(
-            LargeButton(title: "Press here", action: {
+            LargeButton(action: {
                 
+            }, label: {
+                Text("Press here")
             }), category: .control
         )
         
         LibraryItem(
-            LargeButton(title: "Symbol button",
-                        symbolName: "person", action: {
-                            
-                        })
+            LargeButton(action: {
+                
+            }, label: {
+                HStack {
+                    Image(systemName: "person")
+                    Text("User").padding(.leading, 10)
+                }
+            })
             , title: "Large Button with Symbol"
             , category: .control
         )
         
         LibraryItem(
-            LargeButton(title: "Bordered button",
-                        style: ButtonStyle.bordered,
-                        action: { })
+            LargeButton(action: {
+                
+            }, label: {
+                Text("Press here")
+            }, style: .bordered)
             , title: "Large Button with Border"
             , category: .control
         )
         
         LibraryItem(
-            CircleButton(title: "Default", action: {}), category: .control
+            CircleButton(action: {
+                
+            }, label: {
+                Text("Press Here").foregroundColor(Color.white)
+            }), category: .control
         )
         
         LibraryItem(
-            CircleButton(title: "Symbol", symbol: "heart.fil", color: .red, fontColor: .white, action: {}),
+            CircleButton(action: {
+                
+            }, label: {
+                VStack {
+                    Image(systemName: "person")
+                    Text("User").foregroundColor(Color.white)
+                }
+            }),
             title: "Cirlce Button with symbol",
             category: .control
         )
         
         LibraryItem(
-            CircleButton(title: "Tap here", style: .bordered, action: {}),
-            title: "Circle Button with border",
+            CircleButton(action: {
+                
+            }, label: {
+                VStack {
+                    Image(systemName: "person")
+                    Text("User").foregroundColor(Color.white)
+                }
+            }, style: .bordered),title: "Circle Button with border",
             category: .control
         )
     }
@@ -115,23 +140,26 @@ public struct SparkViewLibrary: LibraryContentProvider {
     @LibraryContentBuilder
     public var views: [LibraryItem] {
         LibraryItem(
-            SparkView(message: "Success"),
+            SparkView(label: {
+                Text("Success")
+            }),
             title: "Spark View - Default",
             category: .control
         )
         
         LibraryItem(
-            SparkView(message: "Error", forError: true),
+            SparkView(label: {
+                Text("Error")
+            }, forError: true),
             title: "Spark View - Error",
             category: .control
         )
         
         LibraryItem(
-            SparkView(message: "Downloading",
-                      undoTitle: "Cancel",
-                      undoAction: {},
-                      forError: false,
-                      sparkColor: .blue),
+            SparkView(label: {
+                Text("Downloading")
+            }, undoTitle: "Undo", undoAction: { },
+            sparkColor: .blue),
             title: "Spark View - Undo Action",
             category: .control
         )
@@ -274,3 +302,4 @@ public struct RepresentableLibrary: LibraryContentProvider {
         )
     }
 }
+#endif
