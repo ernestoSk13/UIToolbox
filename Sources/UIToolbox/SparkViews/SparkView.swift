@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-#if !os(macOS)
+#if targetEnvironment(macCatalyst) || os(iOS)
 public struct SparkView: View {
     var message: String
     var undoTitle: String
@@ -53,7 +53,7 @@ public struct SparkView: View {
             }.background(forError ? errorColor : sparkColor)
                 .frame(height: self.height)
                 .padding(.bottom, 0)
-        }.transition(AnyTransition.opacity.combined(with: .move(edge: .bottom)))
+        }
     }
 }
 

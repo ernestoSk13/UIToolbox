@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		5B16F73724A81F1D00BBEDF2 /* UTBProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */; };
+		5BB836A224AADB7600F947B2 /* SUITModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB836A124AADB7600F947B2 /* SUITModifiers.swift */; };
 		OBJ_55 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Transitions.swift */; };
 		OBJ_56 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* BottomSheet.swift */; };
 		OBJ_57 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CircleButton.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		5B16F73624A81F1D00BBEDF2 /* UTBProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTBProgressView.swift; sourceTree = "<group>"; };
+		5BB836A124AADB7600F947B2 /* SUITModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUITModifiers.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		OBJ_12 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -255,7 +257,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -267,7 +269,6 @@
 				OBJ_48 /* UIToolboxSample */,
 				OBJ_49 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -299,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* Transitions.swift */,
+				5BB836A124AADB7600F947B2 /* SUITModifiers.swift */,
 			);
 			path = "Animations&Transitions";
 			sourceTree = "<group>";
@@ -369,7 +371,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,6 +398,7 @@
 				OBJ_60 /* GridLayout.swift in Sources */,
 				OBJ_61 /* ActivityIndicator.swift in Sources */,
 				OBJ_62 /* ReusableCollectionView.swift in Sources */,
+				5BB836A224AADB7600F947B2 /* SUITModifiers.swift in Sources */,
 				OBJ_63 /* SearchBarView.swift in Sources */,
 				OBJ_64 /* TabBarView.swift in Sources */,
 				OBJ_65 /* TextViewRepresentable.swift in Sources */,
