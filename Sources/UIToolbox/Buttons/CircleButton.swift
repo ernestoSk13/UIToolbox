@@ -8,30 +8,36 @@
 
 import SwiftUI
 #if targetEnvironment(macCatalyst) || os(iOS)
-public struct CircleButton: View {
+/// A Button instance with circular form. The Button receives a generic `Label` that can be an image, text, or a combination of both.
+public struct CircleButton<Label>: View where Label : View {
+    var action: (() -> ())
+    var label: Label
     var circleColor: Color
     var fontColor: Color
     var shadowRadius: CGFloat
-    var title: String
-    var symbol: String?
-    var action: (() -> ())
     var style: ButtonStyle
     
-    public init(title: String,
-                symbol: String? = nil,
-                color: Color = .blue,
+    /// Creates an instance
+    /// - Parameters:
+    ///   - action: The action to perform when self is triggered.
+    ///   - label: A view that describes the effect of calling onTrigger.
+    ///   - circleColor: The background color (or border color if `style` is .bordered) of the circle. It is .blue by default.
+    ///   - fontColor: The foreground color that will be given to the `Label` passed. It is .white by default.
+    ///   - shadowRadius: The shadow radius applied to the circle. It is 0 by default.
+    ///   - style: the `ButtonStyle`  of the button. It is `.bordered` by default.
+    public init(action: @escaping (() -> ()),
+                @ViewBuilder label: () -> Label,
+                circleColor: Color = .blue,
                 fontColor: Color = .white,
                 shadowRadius: CGFloat = 0,
-                style: ButtonStyle = .filled,
-                action: @escaping (() -> ())) {
-        self.circleColor = color
-        if fontColor.hashValue != color.hashValue {
+                style: ButtonStyle = .filled) {
+        self.circleColor = circleColor
+        self.label = label()
+        if fontColor.hashValue != circleColor.hashValue {
             self.fontColor = fontColor
         } else {
-            self.fontColor = color
+            self.fontColor = circleColor
         }
-        self.symbol = symbol
-        self.title = title
         self.shadowRadius = shadowRadius
         self.action = action
         self.style = style
@@ -49,11 +55,7 @@ public struct CircleButton: View {
                     Circle().stroke()
                     .shadow(radius: shadowRadius)
                 }
-                if self.symbol != nil {
-                    Image(systemName: self.symbol!).imageScale(.large).foregroundColor(fontColor)
-                } else {
-                    Text(self.title).foregroundColor(fontColor)
-                }
+                self.label.foregroundColor(fontColor)
             }
         }).foregroundColor(circleColor)
         
@@ -63,52 +65,45 @@ public struct CircleButton: View {
 struct CircleButton_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CircleButton(title: "Tap here!", action: {
+            CircleButton(action: {
                 
+            }, label: {
+                Text("Hello").foregroundColor(Color.white)
             })
                 .previewLayout(.sizeThatFits)
                 .padding()
                 .frame(width: 100, height: 100)
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Default Color")
-            CircleButton(title: "Tap here!", color: Color.red, action: {
-                
-            })
+            CircleButton(action: {
+
+            }, label: {
+                Text("Red")
+            }, circleColor: .red, fontColor: .white)
                 .previewLayout(.sizeThatFits)
                 .padding()
                 .frame(width: 100, height: 100)
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Red Color")
-            CircleButton(title: "Tap here!",
-                         color: Color.yellow,
-                         fontColor: .black, action: {
-                            
-            })
+            CircleButton( action: {
+
+            }, label: {
+                Text("Yellow")
+            }, circleColor: .yellow, fontColor: .black, style: .bordered)
                 .previewLayout(.sizeThatFits)
                 .padding()
                 .frame(width: 100, height: 100)
                 .environment(\.colorScheme, .dark)
                 .previewDisplayName("Color and Font")
-            CircleButton(title: "Tap here!",
-                         color: Color.green,
-                         fontColor: .black,
-                         style: .bordered,
-                         action: {
-                            
-            })
-                .previewLayout(.sizeThatFits)
-                .padding()
-                .frame(width: 100, height: 100)
-                .environment(\.colorScheme, .dark)
-                .previewDisplayName("Bordered")
-            CircleButton(title: "Tap here!",
-                         symbol: "mic",
-                         color: Color.black,
-                         fontColor: .white,
-                         style: .filled,
-                         action: {
-                            
-            })
+            
+            CircleButton(action: {
+
+            }, label: {
+                VStack {
+                    Image(systemName: "mic").imageScale(.large)
+                    Text("Record").font(.callout)
+                }
+            }, circleColor: .black)
                 .previewLayout(.sizeThatFits)
                 .padding()
                 .frame(width: 100, height: 100)
