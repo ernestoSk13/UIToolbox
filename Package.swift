@@ -1,18 +1,18 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "UIToolbox",
+    name: "SUITcase",
     platforms: [
-        .iOS(.v13), .macOS(.v10_15), .tvOS(.v13), .watchOS(.v6),
+        .iOS(.v14), .macOS(.v10_15), .tvOS(.v14), .watchOS(.v7),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "UIToolbox",
-            targets: ["UIToolbox"]),
+            name: "SUITcase",
+            targets: ["SUITcase"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,10 +22,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "UIToolbox",
+            name: "SUITcase",
             dependencies: []),
         .testTarget(
-            name: "UIToolboxTests",
-            dependencies: ["UIToolbox"]),
+            name: "SUITcaseTests",
+            dependencies: ["SUITcase"]),
     ]
 )
