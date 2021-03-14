@@ -39,10 +39,11 @@ public struct TabBarWrapper: View {
 /// A `UIViewControllerRepresentable` of UITabBarController tha can be used by SwiftUI.
 fileprivate struct TabbarControllerWrapper: UIViewControllerRepresentable {
     var viewControllers: [UIViewController]
+    var color: UIColor = UIColor.label
     
     func makeUIViewController(context: Context) -> UITabBarController {
         let tabBar = UITabBarController()
-        tabBar.tabBar.tintColor = UIColor.label
+        tabBar.tabBar.tintColor = color
         return tabBar
     }
     
