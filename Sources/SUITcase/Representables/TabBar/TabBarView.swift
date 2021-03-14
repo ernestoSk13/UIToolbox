@@ -11,6 +11,7 @@ import SwiftUI
 /// A Tab Bar Wrapper that enhances the power of the UIKit's UITabBar
 public struct TabBarWrapper: View {
     var controllers: [UIHostingController<TabBarElement>]
+    var color: UIColor = UIColor.label
     
     /// Creates an instance of UITabBar
     /// - Parameter elements: an array of generic views that contain the important information to build a UITabBarItem
@@ -32,7 +33,7 @@ public struct TabBarWrapper: View {
     }
     
     public var body: some View {
-        TabbarControllerWrapper(viewControllers: self.controllers)
+        TabbarControllerWrapper(viewControllers: self.controllers, color: color)
     }
 }
 
