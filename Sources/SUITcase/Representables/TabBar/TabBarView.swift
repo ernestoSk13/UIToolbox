@@ -15,7 +15,7 @@ public struct TabBarWrapper: View {
     
     /// Creates an instance of UITabBar
     /// - Parameter elements: an array of generic views that contain the important information to build a UITabBarItem
-    public init(_ elements: [TabBarElement]) {
+    public init(_ elements: [TabBarElement], color: UIColor = UIColor.label) {
         self.controllers = elements.enumerated().map {
             let hostingController = UIHostingController(rootView: $1)
             
@@ -30,6 +30,7 @@ public struct TabBarWrapper: View {
             
             return hostingController
         }
+        self.color = color
     }
     
     public var body: some View {
