@@ -18,7 +18,7 @@ UIToolbox is available to install view Swift Package Manager (SPM). To add it to
 To start using UIToolbox simply import the libary to the view where you want to apply it.
 
 ```swift
-import SUITcase
+import UIToolbox
 ```
 
 Once you import the library you can implement any of the components that have been created for you:
