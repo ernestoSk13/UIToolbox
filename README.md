@@ -7,7 +7,7 @@ UIToolbox is a library for iOS, WatchOS and Mac Catalyst projects that use Swift
 UIToolbox is available to install view Swift Package Manager (SPM). To add it to a current iOS project follow the next steps:
 
 1. Using Xcode 11 or above, go to File > Swift Packages > Add Package Dependency
-2. Select the target where SUITcase will be running.
+2. Select the target where UIToolbox will be running.
 3. Paste the project's URL: https://github.com/ernestoSk13/UIToolbox
 4. Click next and select on "Rules" the "Branch" option and type "master" 
 5. Review the product that will be generated and Finish the process.
