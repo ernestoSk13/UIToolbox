@@ -8,7 +8,7 @@ UIToolbox is available to install view Swift Package Manager (SPM). To add it to
 
 1. Using Xcode 11 or above, go to File > Swift Packages > Add Package Dependency
 2. Select the target where UIToolbox will be running.
-3. Paste the project's URL: https://github.com/ernestoSk13/UIToolbox
+3. Paste the project's URL: https://github.com/ernestoSk13/UIToolbox.git
 4. Click next and select on "Rules" the "Branch" option and type "master" 
 5. Review the product that will be generated and Finish the process.
 6. Ensure that your package has been added correctly to the project.
