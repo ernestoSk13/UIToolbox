@@ -1,21 +1,21 @@
-# SUITcase : SwiftUI Toolcase
-SUITCase is a library for iOS, WatchOS and Mac Catalyst projects that use SwiftUI.  This library provide components that have been customized and that are not part of the basic SwiftUI native library. 
+# UIToolbox
+UIToolbox is a library for iOS, WatchOS and Mac Catalyst projects that use SwiftUI and UIKit.  This library provide components that have been customized and that are not part of the basic SwiftUI native library. 
 
 
 ### Installation
 
-SUITcase is available to install view Swift Package Manager (SPM). To add it to a current iOS project follow the next steps:
+UIToolbox is available to install view Swift Package Manager (SPM). To add it to a current iOS project follow the next steps:
 
 1. Using Xcode 11 or above, go to File > Swift Packages > Add Package Dependency
-2. Select the target where SUITcase will be running.
-3. Paste the project's URL: https://orahub.oci.oraclecorp.com/fmw-bimobile-dev/suitcase.git
+2. Select the target where UIToolbox will be running.
+3. Paste the project's URL: https://github.com/ernestoSk13/UIToolbox.git
 4. Click next and select on "Rules" the "Branch" option and type "master" 
 5. Review the product that will be generated and Finish the process.
 6. Ensure that your package has been added correctly to the project.
 
 ## Usage
 
-To start using SUITcase simply import the libary to the view where you want to apply it.
+To start using UIToolbox simply import the libary to the view where you want to apply it.
 
 ```swift
 import UIToolbox
@@ -479,9 +479,3 @@ Default:
 ```swift
 WebView(request: URLRequest(url: URL(string:"www.oracle.com")!))
 ```
-
-
-## Contributing
-See [CONTRIBUTING](./CONTRIBUTING.md) for details.
-
-
